@@ -1,0 +1,29 @@
+{
+  "name": "streetwechat",
+  "version": "1.0.0",
+  "description": "init",
+  "main": "bundle.js",
+  "dependencies": {
+    "css-loader": "^0.28.0",
+    "html-webpack-plugin": "^2.28.0",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.4"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --inline  --content-base src/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quanta2006/streetWeChat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quanta2006/streetWeChat/issues"
+  },
+  "homepage": "https://github.com/quanta2006/streetWeChat#readme"
+}

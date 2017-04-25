@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+@import url('variables.less');
+
+html, body {
+    height: 100%
+}
+
+.g-index {
+    display: flex;
+    flex-direction: column;
+
+    .g-hd {
+        background: @gray-light;
+        padding: 5px 10px;
+        color: @body-bg;
+        // background: #ff6600;
+    }
+
+    .g-bd {
+        background: @gray-lighter;
+        padding: 5px 10px;
+    }
+
+    .g-ft {
+        background: @gray-dark;
+        padding: 5px 10px;
+        color: @body-bg;
+    }
+}
+
