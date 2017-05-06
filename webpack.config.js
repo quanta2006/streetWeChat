@@ -15,19 +15,29 @@ module.exports = {
         new OpenBrowserPlugin({ //自动打开浏览器
             url: 'http://localhost:8080'
         }),
-        new uglifyJsPlugin({ //js代码压缩
-            compress: {
-                warnings: false
-            }
-        })
+        // new uglifyJsPlugin({ //js代码压缩
+        //     compress: {
+        //         warnings: false
+        //     }
+        // })
     ],
     module: {
-        loaders: [{
-            test: /\.less$/,   // less解析器
+        rules: [
+        {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: 'eslint-loader',
+            enforce: 'pre',
+            options: {
+                formatter: require('eslint-friendly-formatter')
+            }
+        }, {
+            test: /\.less$/, // less解析器
             loader: 'style-loader!css-loader!less-loader'
         }, {
-            test: /\.(png|jpg)$/,  // img压缩器
+            test: /\.(png|jpg)$/, // img压缩器
             loader: 'url-loader?limit=8192'
         }, ]
-    }
+    },
+    devtool: 'source-map'
 };

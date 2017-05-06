@@ -1,8 +1,8 @@
-import "../less/index.less"
-
+import '../less/index.less'
 
 $(init)
 
-function init() {
-    console.log('ccc');
+function init () {
+    console.log('ccc')
+    console.log('aaa')
 }
